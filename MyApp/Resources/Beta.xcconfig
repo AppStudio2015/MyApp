@@ -1,0 +1,19 @@
+//
+//  Beta.xcconfig
+//  MyApp
+//
+//  Created by PandoraXY on 2018/10/29.
+//  Copyright © 2018 AppStudio. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+MY_BUNDLE_DISPLAY_NAME = MyApp(Beta)
+
+//CODE_SIGN_IDENTITY_DEV =
+
+//PROVISIONING_PROFILE_SPECIFIER_DEV =
+
+// Flag to indicate if we want to include the debug settings bundle or not
+INCLUDE_SETTINGS_BUNDLE = NO
