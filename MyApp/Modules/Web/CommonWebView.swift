@@ -7,15 +7,32 @@
 //
 
 import UIKit
+import WebKit
 
 class CommonWebView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    // MARK: - Public Properties
+    public lazy var webView: WKWebView = {
+        let config = WKWebViewConfiguration.init()
+        let webView = WKWebView.init(frame: CGRect.zero, configuration: config)
+        
+        self.addSubview(webView)
+        
+        return webView
+    }()
+    
+    // MARK: - Private Properties
+    
+    // MARK: - Lifecycle
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
-    */
-
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    deinit {
+        //
+    }
 }
