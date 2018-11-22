@@ -14,8 +14,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.testAlamofire()
-        self.testDevice()
+//        self.testAlamofire()
+//        self.testDevice()
+        self.testCodable()
     }
 
 
@@ -35,6 +36,11 @@ class ViewController: UIViewController {
     private func testDevice() -> Void {
         let deviceModel = UIDevice.deviceModel
         print("CurrentDevice: \(deviceModel.description())")
+    }
+    
+    private func testCodable() -> Void {
+        let model = BaseModel()
+        model.testCodable()
     }
 }
 
