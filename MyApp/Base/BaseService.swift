@@ -8,6 +8,11 @@
 
 import Foundation
 
+struct ServiceData: Codable {
+    var status: Int = 0
+    var message: String = ""
+}
+
 fileprivate enum MapError: Error {
     case jsonToModelFail    //json转model失败
     case jsonToDataFail     //json转data失败

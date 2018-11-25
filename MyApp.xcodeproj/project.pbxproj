@@ -98,6 +98,11 @@
 		04DC974D218F2DA000540646 /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC9733218F2DA000540646 /* Placeholder.swift */; };
 		04DC974E218F2DA000540646 /* KingfisherOptionsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC9734218F2DA000540646 /* KingfisherOptionsInfo.swift */; };
 		04DC9750218F2DA000540646 /* ImagePrefetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC9736218F2DA000540646 /* ImagePrefetcher.swift */; };
+		04EA738521A846830083F870 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EA738421A846830083F870 /* HomeService.swift */; };
+		04EA738721A847960083F870 /* LoginAndRegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EA738621A847960083F870 /* LoginAndRegisterService.swift */; };
+		04EA738921A847DD0083F870 /* CourseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EA738821A847DD0083F870 /* CourseService.swift */; };
+		04EA739921AA93E40083F870 /* AudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EA739821AA93E40083F870 /* AudioController.swift */; };
+		04EA739E21AA94C60083F870 /* PhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EA739D21AA94C60083F870 /* PhotoController.swift */; };
 		04EFC2852174C16F00A036DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFC2842174C16F00A036DC /* AppDelegate.swift */; };
 		04EFC2872174C16F00A036DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFC2862174C16F00A036DC /* ViewController.swift */; };
 		04EFC28C2174C17000A036DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04EFC28B2174C17000A036DC /* Assets.xcassets */; };
@@ -220,6 +225,13 @@
 		04DC9733218F2DA000540646 /* Placeholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Placeholder.swift; sourceTree = "<group>"; };
 		04DC9734218F2DA000540646 /* KingfisherOptionsInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KingfisherOptionsInfo.swift; sourceTree = "<group>"; };
 		04DC9736218F2DA000540646 /* ImagePrefetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePrefetcher.swift; sourceTree = "<group>"; };
+		04EA738421A846830083F870 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		04EA738621A847960083F870 /* LoginAndRegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAndRegisterService.swift; sourceTree = "<group>"; };
+		04EA738821A847DD0083F870 /* CourseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseService.swift; sourceTree = "<group>"; };
+		04EA738D21AA8C950083F870 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		04EA738E21AA8C950083F870 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		04EA739821AA93E40083F870 /* AudioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioController.swift; sourceTree = "<group>"; };
+		04EA739D21AA94C60083F870 /* PhotoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoController.swift; sourceTree = "<group>"; };
 		04EFC2812174C16F00A036DC /* MyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04EFC2842174C16F00A036DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04EFC2862174C16F00A036DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -327,18 +339,11 @@
 		047DB38F2192955B0016128E /* Media */ = {
 			isa = PBXGroup;
 			children = (
-				047DB3902192956B0016128E /* Audio */,
-				047DB392219295890016128E /* Photo */,
+				04EA739721AA93C40083F870 /* Audio */,
+				04EA739C21AA949A0083F870 /* Photo */,
 				047DB391219295730016128E /* Video */,
 			);
 			path = Media;
-			sourceTree = "<group>";
-		};
-		047DB3902192956B0016128E /* Audio */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Audio;
 			sourceTree = "<group>";
 		};
 		047DB391219295730016128E /* Video */ = {
@@ -348,13 +353,6 @@
 				04AD126A21956E3F0069E82A /* ImagePickerViewController.swift */,
 			);
 			path = Video;
-			sourceTree = "<group>";
-		};
-		047DB392219295890016128E /* Photo */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Photo;
 			sourceTree = "<group>";
 		};
 		048341C2217780C900E63AEF /* Frameworks */ = {
@@ -374,6 +372,7 @@
 				04C19B18218DAA2000CBBD56 /* Home */,
 				047DB38F2192955B0016128E /* Media */,
 				04C19B21218DCCE100CBBD56 /* OnlineMall */,
+				04EA738A21A84B8B0083F870 /* Push */,
 				04C19B19218DAA2900CBBD56 /* User */,
 				0419861E2190781F008290AA /* Web */,
 			);
@@ -401,6 +400,7 @@
 				0419861C21907767008290AA /* RegisterViewController.swift */,
 				04198614219076F2008290AA /* RegisterViewModel.swift */,
 				0401AB19219461A800FDD080 /* LoginAndRegisterProtocol.swift */,
+				04EA738621A847960083F870 /* LoginAndRegisterService.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -411,6 +411,7 @@
 				04C19B1A218DAA9300CBBD56 /* HomeViewController.swift */,
 				04C19B30218DE32300CBBD56 /* HomeModel.swift */,
 				04C19B32218DE33800CBBD56 /* HomeView.swift */,
+				04EA738421A846830083F870 /* HomeService.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -431,6 +432,7 @@
 				04C19B1F218DCCD900CBBD56 /* CourseViewController.swift */,
 				04C19B2A218DE2D400CBBD56 /* CourseView.swift */,
 				04C19B28218DE2B500CBBD56 /* CourseModel.swift */,
+				04EA738821A847DD0083F870 /* CourseService.swift */,
 			);
 			path = Course;
 			sourceTree = "<group>";
@@ -486,6 +488,29 @@
 				04DC9736218F2DA000540646 /* ImagePrefetcher.swift */,
 			);
 			path = Kingfisher;
+			sourceTree = "<group>";
+		};
+		04EA738A21A84B8B0083F870 /* Push */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Push;
+			sourceTree = "<group>";
+		};
+		04EA739721AA93C40083F870 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				04EA739821AA93E40083F870 /* AudioController.swift */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		04EA739C21AA949A0083F870 /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				04EA739D21AA94C60083F870 /* PhotoController.swift */,
+			);
+			path = Photo;
 			sourceTree = "<group>";
 		};
 		04EFC2782174C16F00A036DC = {
@@ -671,12 +696,15 @@
 				04C19B1D218DAAA400CBBD56 /* UserViewController.swift in Sources */,
 				04C19B2D218DE2EE00CBBD56 /* UserView.swift in Sources */,
 				04DC9740218F2DA000540646 /* UIButton+Kingfisher.swift in Sources */,
+				04EA738721A847960083F870 /* LoginAndRegisterService.swift in Sources */,
 				0419860C21906DEB008290AA /* AccountModel.swift in Sources */,
 				044C8B1F218F310400AD10DA /* DispatchQueue+Alamofire.swift in Sources */,
+				04EA738521A846830083F870 /* HomeService.swift in Sources */,
 				044C8B2D218F310400AD10DA /* SessionDelegate.swift in Sources */,
 				041986192190773D008290AA /* RegisterView.swift in Sources */,
 				04DC9747218F2DA000540646 /* FormatIndicatedCacheSerializer.swift in Sources */,
 				0401AB1A219461A800FDD080 /* LoginAndRegisterProtocol.swift in Sources */,
+				04EA739921AA93E40083F870 /* AudioController.swift in Sources */,
 				04EFC29B2174C3D500A036DC /* BaseView.swift in Sources */,
 				04C19B04218D7C5A00CBBD56 /* UIColorExtensions.swift in Sources */,
 				04DC973E218F2DA000540646 /* Indicator.swift in Sources */,
@@ -710,6 +738,7 @@
 				04DC9744218F2DA000540646 /* ImageModifier.swift in Sources */,
 				042B28F62191C7BD009E8D3D /* SwiftyJSON.swift in Sources */,
 				04DC973F218F2DA000540646 /* CacheSerializer.swift in Sources */,
+				04EA738921A847DD0083F870 /* CourseService.swift in Sources */,
 				04C19B33218DE33800CBBD56 /* HomeView.swift in Sources */,
 				044C8B29218F310400AD10DA /* SessionManager.swift in Sources */,
 				04198615219076F2008290AA /* RegisterViewModel.swift in Sources */,
@@ -747,6 +776,7 @@
 				04DC9737218F2DA000540646 /* ImageCache.swift in Sources */,
 				04C19B07218D7DF200CBBD56 /* UIScreenExtensions.swift in Sources */,
 				044C8B23218F310400AD10DA /* Validation.swift in Sources */,
+				04EA739E21AA94C60083F870 /* PhotoController.swift in Sources */,
 				044C8B1B218F310400AD10DA /* TaskDelegate.swift in Sources */,
 				046DADC72191EA4A00CDC111 /* WRPageControl.swift in Sources */,
 			);
@@ -759,6 +789,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				04EFC2B32174CC4300A036DC /* Base */,
+				04EA738E21AA8C950083F870 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -767,6 +798,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				04EFC2B52174CC4300A036DC /* Base */,
+				04EA738D21AA8C950083F870 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -778,6 +810,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -836,10 +869,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconBeta;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 69L92VZ7E4;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/MyApp/ThirdParty/Frameworks",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = MyApp/Resources/MyAppInfo.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -863,6 +893,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -925,6 +956,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -983,10 +1015,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconDebug;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 69L92VZ7E4;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/MyApp/ThirdParty/Frameworks",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = MyApp/Resources/MyAppInfo.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1012,10 +1041,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 69L92VZ7E4;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/MyApp/ThirdParty/Frameworks",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = MyApp/Resources/MyAppInfo.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (

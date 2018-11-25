@@ -55,6 +55,7 @@ class CourseViewController: BaseViewController {
     }
     
     #endif
+    
     // MARK: - Setters and Getters
     
     // MARK: - Private Functions

@@ -11,6 +11,7 @@ import Photos
 import MobileCoreServices
 
 public enum MediaType: Int {
+    case none
     case audio
     case video
     case photo
@@ -19,11 +20,30 @@ public enum MediaType: Int {
 class ImagePickerViewController: BaseViewController {
 
     // MARK: - Public Properties
+    public var mediaType: MediaType = .none
     
     // MARK: - Private Properties
     private var isFrontCamera: Bool = true
-    private lazy var videoImagePickerCtl: UIImagePickerController = {
+    
+    /// 视频
+    private lazy var videoImagePickerCtrl: UIImagePickerController = {
         let imagePickerController = UIImagePickerController.init()
+//        imagePickerController.isEditing = true
+        
+        return imagePickerController
+    }()
+    
+    /// 图库
+    private lazy var photoImagePickerCtrl: UIImagePickerController = {
+        let imagePickerController = UIImagePickerController.init()
+        imagePickerController.allowsEditing = true
+        
+        return imagePickerController
+    }()
+    
+    private lazy var takePhotoImagePickerCtrl: UIImagePickerController = {
+        let imagePickerController = UIImagePickerController.init()
+        imagePickerController.isEditing = true
         
         return imagePickerController
     }()
@@ -47,11 +67,27 @@ class ImagePickerViewController: BaseViewController {
             if self.isAuthorizationAvailable(for: .video) {
                 if self.isVideoRecordingAvailable() {
                     self.defaultVideoSettings()
-                    self.startImagePickerController()
+                    self.startVideoImagePickerController()
                 }
             }
             break
         case 1:
+            if self.isAuthorizationAvailable(for: .photo) {
+                if self.isPhotoLibararyAvailabel() {
+                    self.defaultPhotoSetting()
+                    self.startPhotoImagePickerController()
+                }
+            }
+            break;
+        case 2:
+            if self.isAuthorizationAvailable(for: .photo) {
+                if self.isPhotoLibrarySavingAvailable() {
+                    self.defultTakePhotoSetting()
+                    self.startTakePhotoImagePickerController()
+                }
+            }
+            break
+        case 3:
             self.dismiss(animated: true, completion: nil)
             break
         default:
@@ -60,7 +96,7 @@ class ImagePickerViewController: BaseViewController {
     }
     
     override func testModuleNames() -> [String] {
-        return ["VideoCapture","Back"]
+        return ["VideoCapture","PhotoLibrary","TakePhoto","Back"]
     }
     
     #endif
@@ -117,14 +153,29 @@ class ImagePickerViewController: BaseViewController {
                 return false
             }
             break
+        case .none:
+            return false
         }
         return true
     }
     
     /// 启动视频拍摄
-    private func startImagePickerController() -> Void {
-        self.present(self.videoImagePickerCtl, animated: true) {
-            
+    private func startVideoImagePickerController() -> Void {
+        self.present(self.videoImagePickerCtrl, animated: true) {
+            //
+        }
+    }
+    
+    /// 启动相册
+    private func startPhotoImagePickerController() -> Void {
+        self.present(self.photoImagePickerCtrl, animated: true) {
+            //
+        }
+    }
+    
+    private func startTakePhotoImagePickerController() -> Void {
+        self.present(self.takePhotoImagePickerCtrl, animated: true) {
+            //
         }
     }
     
@@ -132,27 +183,45 @@ class ImagePickerViewController: BaseViewController {
     
     /// 默认视频录制设置
     public func defaultVideoSettings() -> Void {
-        self.videoImagePickerCtl.sourceType = .camera
-        self.videoImagePickerCtl.mediaTypes = [(kUTTypeMovie as String)] // UIImagePickerController.availableMediaTypes(for: .camera)
-        self.videoImagePickerCtl.delegate = self
+        self.videoImagePickerCtrl.sourceType = .camera
+        self.videoImagePickerCtrl.mediaTypes = [(kUTTypeMovie as String)] // UIImagePickerController.availableMediaTypes(for: .camera)
+        self.videoImagePickerCtrl.delegate = self
         
-        self.videoImagePickerCtl.showsCameraControls = true
-        self.videoImagePickerCtl.videoQuality = .typeMedium
-        self.videoImagePickerCtl.cameraFlashMode = .auto
-        self.videoImagePickerCtl.videoMaximumDuration = 10.0
+        self.videoImagePickerCtrl.showsCameraControls = true
+        self.videoImagePickerCtrl.videoQuality = .typeMedium
+        self.videoImagePickerCtrl.cameraFlashMode = .auto
+        self.videoImagePickerCtrl.videoMaximumDuration = 10.0
         self.switchCamera()
+    }
+    
+    public func defultTakePhotoSetting() -> Void {
+        self.takePhotoImagePickerCtrl.sourceType = .camera
+        self.takePhotoImagePickerCtrl.mediaTypes = [(kUTTypeImage as String)]
+        self.takePhotoImagePickerCtrl.delegate = self
+        
+        self.takePhotoImagePickerCtrl.showsCameraControls = true
+        self.takePhotoImagePickerCtrl.cameraFlashMode = .auto
+        self.takePhotoImagePickerCtrl.videoQuality = .typeHigh
+    }
+    
+    public func defaultPhotoSetting() -> Void {
+        self.photoImagePickerCtrl.sourceType = .photoLibrary
+        self.photoImagePickerCtrl.mediaTypes = [(kUTTypeImage as String)]
+        self.photoImagePickerCtrl.delegate = self
+        
+//        self.photoImagePickerCtrl.
     }
     
     /// 切换摄像头
     public func switchCamera() -> Void {
         if self.isFrontCamera {
             if UIImagePickerController.isCameraDeviceAvailable(.rear) {
-                self.videoImagePickerCtl.cameraDevice = .rear
+                self.videoImagePickerCtrl.cameraDevice = .rear
                 self.isFrontCamera = false
             }
         } else {
             if UIImagePickerController.isCameraDeviceAvailable(.front) {
-                self.videoImagePickerCtl.cameraDevice = .front
+                self.videoImagePickerCtrl.cameraDevice = .front
                 self.isFrontCamera = true
             }
         }
