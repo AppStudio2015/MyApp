@@ -46,6 +46,12 @@
 		046DADC72191EA4A00CDC111 /* WRPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046DADC32191EA4A00CDC111 /* WRPageControl.swift */; };
 		046DADC82191EA4A00CDC111 /* WRCycleScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046DADC42191EA4A00CDC111 /* WRCycleScrollView.swift */; };
 		046DADC92191EA4A00CDC111 /* WRCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046DADC52191EA4A00CDC111 /* WRCycleCell.swift */; };
+		0478BBE721AC37650060124F /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478BBE621AC37650060124F /* HomeTableViewCell.swift */; };
+		0478BBED21AC37CF0060124F /* OnlineMallCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478BBEC21AC37CF0060124F /* OnlineMallCollectionViewCell.swift */; };
+		0478BBF821AC3D670060124F /* OnlineMallService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478BBF721AC3D670060124F /* OnlineMallService.swift */; };
+		0478BBFA21AC3DBF0060124F /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478BBF921AC3DBF0060124F /* UserService.swift */; };
+		0478BBFC21AC3E800060124F /* PushManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478BBFB21AC3E800060124F /* PushManager.swift */; };
+		0478BBFF21AC3EAE0060124F /* ShareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478BBFE21AC3EAE0060124F /* ShareManager.swift */; };
 		04AD1269219562B20069E82A /* SimpleVideoRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AD1268219562B20069E82A /* SimpleVideoRecorder.swift */; };
 		04AD126B21956E3F0069E82A /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AD126A21956E3F0069E82A /* ImagePickerViewController.swift */; };
 		04AD126D2195740A0069E82A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04AD126C219574090069E82A /* AVFoundation.framework */; };
@@ -172,6 +178,12 @@
 		046DADC32191EA4A00CDC111 /* WRPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRPageControl.swift; sourceTree = "<group>"; };
 		046DADC42191EA4A00CDC111 /* WRCycleScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRCycleScrollView.swift; sourceTree = "<group>"; };
 		046DADC52191EA4A00CDC111 /* WRCycleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRCycleCell.swift; sourceTree = "<group>"; };
+		0478BBE621AC37650060124F /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		0478BBEC21AC37CF0060124F /* OnlineMallCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineMallCollectionViewCell.swift; sourceTree = "<group>"; };
+		0478BBF721AC3D670060124F /* OnlineMallService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineMallService.swift; sourceTree = "<group>"; };
+		0478BBF921AC3DBF0060124F /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		0478BBFB21AC3E800060124F /* PushManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushManager.swift; sourceTree = "<group>"; };
+		0478BBFE21AC3EAE0060124F /* ShareManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareManager.swift; sourceTree = "<group>"; };
 		04AD1268219562B20069E82A /* SimpleVideoRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleVideoRecorder.swift; sourceTree = "<group>"; };
 		04AD126A21956E3F0069E82A /* ImagePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
 		04AD126C219574090069E82A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -336,6 +348,144 @@
 			path = WRCycleScrollView;
 			sourceTree = "<group>";
 		};
+		0478BBE221AC36E80060124F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04C19B30218DE32300CBBD56 /* HomeModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0478BBE321AC36FD0060124F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04C19B32218DE33800CBBD56 /* HomeView.swift */,
+				0478BBE621AC37650060124F /* HomeTableViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		0478BBE421AC37080060124F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04C19B1A218DAA9300CBBD56 /* HomeViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		0478BBE521AC37120060124F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				04EA738421A846830083F870 /* HomeService.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		0478BBE821AC376D0060124F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04C19B24218DE24300CBBD56 /* OnlineMallView.swift */,
+				0478BBEC21AC37CF0060124F /* OnlineMallCollectionViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		0478BBE921AC37760060124F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04C19B22218DCD3900CBBD56 /* OnlineMallViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		0478BBEA21AC37820060124F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04C19B26218DE29400CBBD56 /* OnlineMallModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0478BBEB21AC378D0060124F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				0478BBF721AC3D670060124F /* OnlineMallService.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		0478BBEE21AC37DE0060124F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04C19B2C218DE2EE00CBBD56 /* UserView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		0478BBEF21AC37EA0060124F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04C19B1C218DAAA400CBBD56 /* UserViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		0478BBF021AC37F60060124F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04C19B2E218DE30400CBBD56 /* UserModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0478BBF121AC380A0060124F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04C19B2A218DE2D400CBBD56 /* CourseView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		0478BBF221AC38110060124F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04C19B1F218DCCD900CBBD56 /* CourseViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		0478BBF321AC381A0060124F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04C19B28218DE2B500CBBD56 /* CourseModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0478BBF421AC382B0060124F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				04EA738821A847DD0083F870 /* CourseService.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		0478BBF521AC38C40060124F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				0478BBF921AC3DBF0060124F /* UserService.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		0478BBFD21AC3E930060124F /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				0478BBFE21AC3EAE0060124F /* ShareManager.swift */,
+			);
+			path = Share;
+			sourceTree = "<group>";
+		};
 		047DB38F2192955B0016128E /* Media */ = {
 			isa = PBXGroup;
 			children = (
@@ -373,6 +523,7 @@
 				047DB38F2192955B0016128E /* Media */,
 				04C19B21218DCCE100CBBD56 /* OnlineMall */,
 				04EA738A21A84B8B0083F870 /* Push */,
+				0478BBFD21AC3E930060124F /* Share */,
 				04C19B19218DAA2900CBBD56 /* User */,
 				0419861E2190781F008290AA /* Web */,
 			);
@@ -408,10 +559,10 @@
 		04C19B18218DAA2000CBBD56 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				04C19B1A218DAA9300CBBD56 /* HomeViewController.swift */,
-				04C19B30218DE32300CBBD56 /* HomeModel.swift */,
-				04C19B32218DE33800CBBD56 /* HomeView.swift */,
-				04EA738421A846830083F870 /* HomeService.swift */,
+				0478BBE421AC37080060124F /* Controller */,
+				0478BBE221AC36E80060124F /* Model */,
+				0478BBE521AC37120060124F /* Service */,
+				0478BBE321AC36FD0060124F /* View */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -419,9 +570,10 @@
 		04C19B19218DAA2900CBBD56 /* User */ = {
 			isa = PBXGroup;
 			children = (
-				04C19B1C218DAAA400CBBD56 /* UserViewController.swift */,
-				04C19B2C218DE2EE00CBBD56 /* UserView.swift */,
-				04C19B2E218DE30400CBBD56 /* UserModel.swift */,
+				0478BBEF21AC37EA0060124F /* Controller */,
+				0478BBF021AC37F60060124F /* Model */,
+				0478BBF521AC38C40060124F /* Service */,
+				0478BBEE21AC37DE0060124F /* View */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -429,10 +581,10 @@
 		04C19B1E218DC5E600CBBD56 /* Course */ = {
 			isa = PBXGroup;
 			children = (
-				04C19B1F218DCCD900CBBD56 /* CourseViewController.swift */,
-				04C19B2A218DE2D400CBBD56 /* CourseView.swift */,
-				04C19B28218DE2B500CBBD56 /* CourseModel.swift */,
-				04EA738821A847DD0083F870 /* CourseService.swift */,
+				0478BBF221AC38110060124F /* Controller */,
+				0478BBF321AC381A0060124F /* Model */,
+				0478BBF421AC382B0060124F /* Service */,
+				0478BBF121AC380A0060124F /* View */,
 			);
 			path = Course;
 			sourceTree = "<group>";
@@ -440,9 +592,10 @@
 		04C19B21218DCCE100CBBD56 /* OnlineMall */ = {
 			isa = PBXGroup;
 			children = (
-				04C19B22218DCD3900CBBD56 /* OnlineMallViewController.swift */,
-				04C19B26218DE29400CBBD56 /* OnlineMallModel.swift */,
-				04C19B24218DE24300CBBD56 /* OnlineMallView.swift */,
+				0478BBE921AC37760060124F /* Controller */,
+				0478BBEA21AC37820060124F /* Model */,
+				0478BBEB21AC378D0060124F /* Service */,
+				0478BBE821AC376D0060124F /* View */,
 			);
 			path = OnlineMall;
 			sourceTree = "<group>";
@@ -493,6 +646,7 @@
 		04EA738A21A84B8B0083F870 /* Push */ = {
 			isa = PBXGroup;
 			children = (
+				0478BBFB21AC3E800060124F /* PushManager.swift */,
 			);
 			path = Push;
 			sourceTree = "<group>";
@@ -689,6 +843,7 @@
 				04C19B27218DE29400CBBD56 /* OnlineMallModel.swift in Sources */,
 				04DC9748218F2DA000540646 /* ImageTransition.swift in Sources */,
 				044C8B22218F310400AD10DA /* AFError.swift in Sources */,
+				0478BBFF21AC3EAE0060124F /* ShareManager.swift in Sources */,
 				04DC9719218F157C00540646 /* NSNotificationExtensions.swift in Sources */,
 				04C19B20218DCCD900CBBD56 /* CourseViewController.swift in Sources */,
 				04C19B10218D907800CBBD56 /* GlobalFunctions.swift in Sources */,
@@ -724,12 +879,16 @@
 				0401897E219F1A4F0024F60E /* BaseService.swift in Sources */,
 				04DC9749218F2DA000540646 /* AnimatedImageView.swift in Sources */,
 				044C8B20218F310400AD10DA /* Result.swift in Sources */,
+				0478BBE721AC37650060124F /* HomeTableViewCell.swift in Sources */,
 				04C19B03218D7C5A00CBBD56 /* UIDeviceExtensions.swift in Sources */,
 				04DC974D218F2DA000540646 /* Placeholder.swift in Sources */,
 				04C19B1B218DAA9300CBBD56 /* HomeViewController.swift in Sources */,
 				04C19B15218D98C000CBBD56 /* GuideView.swift in Sources */,
+				0478BBED21AC37CF0060124F /* OnlineMallCollectionViewCell.swift in Sources */,
 				04198613219076DA008290AA /* LoginViewModel.swift in Sources */,
+				0478BBFA21AC3DBF0060124F /* UserService.swift in Sources */,
 				04AD126B21956E3F0069E82A /* ImagePickerViewController.swift in Sources */,
+				0478BBF821AC3D670060124F /* OnlineMallService.swift in Sources */,
 				04DC9739218F2DA000540646 /* Kingfisher.swift in Sources */,
 				04DC9738218F2DA000540646 /* ThreadHelper.swift in Sources */,
 				044C8B1C218F310400AD10DA /* MultipartFormData.swift in Sources */,
@@ -773,6 +932,7 @@
 				04DC9750218F2DA000540646 /* ImagePrefetcher.swift in Sources */,
 				04EFC29F2174C40900A036DC /* BaseModel.swift in Sources */,
 				04C19B31218DE32300CBBD56 /* HomeModel.swift in Sources */,
+				0478BBFC21AC3E800060124F /* PushManager.swift in Sources */,
 				04DC9737218F2DA000540646 /* ImageCache.swift in Sources */,
 				04C19B07218D7DF200CBBD56 /* UIScreenExtensions.swift in Sources */,
 				044C8B23218F310400AD10DA /* Validation.swift in Sources */,
